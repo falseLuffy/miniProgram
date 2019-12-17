@@ -11,7 +11,7 @@
                 <view class="wrap">
                     <view class="ad">
                         <text class="text">每一餐都值得认真对待</text>
-                        <image src="./a.png" class="ad-image"></image>
+                        <image src="./pet.png" class="ad-image"></image>
                     </view>
                     <view>
                         <view class="meal" wx:for="{{item.content}}" wx:key="{{list}}">
