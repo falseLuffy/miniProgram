@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<swiper style="height: 100%;" bindchange="swiperChange" current="{{current}}"
+        indicator-dots="true" indicator-color="#e2e2e2" indicator-active-color="#fec">
+    <swiper-item wx:for="{{list}}" wx:key="{{list}}">
+        <scroll-view class="container" scroll-y="true" scroll-with-animation="true" enable-back-to-top="true"
+                     scroll-anchoring="true">
+            <view class="con">
+                <view class="head">
+                    <text class="head-text">{{today}}</text>
+                </view>
+                <view class="wrap">
+                    <view class="ad">
+                        <text class="text">每一餐都值得认真对待</text>
+                        <image src="./a.png" class="ad-image"></image>
+                    </view>
+                    <view>
+                        <view class="meal" wx:for="{{item.content}}" wx:key="{{list}}">
+                            <view class="meal-head">
+                                <text>{{item.name}}</text>
+                            </view>
+                            <view class="meal-list">
+                                <view class="list" wx:for="{{item.content}}" wx:key="{{item.content}}">
+                                    <text class="label">{{item.name}}</text>
+                                    <text>:</text>
+                                    <text class="value">{{item.content}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
